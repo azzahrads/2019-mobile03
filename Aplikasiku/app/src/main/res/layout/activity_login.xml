@@ -7,45 +7,38 @@
 	tools:context=".LoginActivity"
     android:padding="16dp">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
-
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_semi_bold"
         android:text="Welcome Back"
+        android:textColor="#313131"
+        android:layout_marginTop="90dp"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:text="Sign in to continue"
         android:fontFamily="@font/montserrat_light"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/welcome"
         app:layout_constraintStart_toStartOf="parent"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/form_guide"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.27"/>
 
     <TextView
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Username"
+        android:textColor="#313131"
         android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/form_guide"/>
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toBottomOf="@id/info"/>
 
     <EditText
         android:id="@+id/etusername"
@@ -60,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Password"
+        android:textColor="#313131"
         android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="16sp"
         android:layout_marginTop="24dp"
@@ -80,6 +74,7 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:text="Forgot Password"
+        android:textColor="#313131"
         android:fontFamily="@font/montserrat_semi_bold"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/etpassword"
@@ -90,8 +85,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_red"
         app:layout_constraintTop_toBottomOf="@id/forgot"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="Log In"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:textColor="#fff"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
